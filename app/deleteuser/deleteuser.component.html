@@ -1,0 +1,22 @@
+<div class="modal-header">
+ 
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  
+    <div class="form-group">
+      <h3>Are you sure want to delete {{this.username}}?</h3>
+  
+            <div class="modal-footer">
+              <div class="form-group">
+                <button  class="btn btn-save" (click)="delete()">Yes</button>&nbsp;&nbsp;
+                <button  class="btn btn-save" (click)="cancle()">No</button>&nbsp;&nbsp;
+  
+              </div>
+            </div>
+          </div>
+  
+  
+        </div>

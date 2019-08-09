@@ -1,0 +1,146 @@
+<div class="modal-header">
+    <h5>Add Company</h5>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  
+    <div class="form-group">
+      <form [formGroup]="userForm" (ngSubmit)="edituser()">
+        <div class="form-group">
+          <label for="name">id</label>
+          <input type="text" formControlName="id" class="form-control" [(ngModel)]="id"
+            [ngClass]="{'is-invalid':submitted && f.id.errors}" [(ngModel)]="id" disabled />
+          <div *ngIf="submitted && f.id.errors" class="lbl-err">
+            <div *ngIf=" f.id.errors.required ">id is required</div>
+          </div>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" class="form-control" [(ngModel)]="name"
+              [ngClass]="{'is-invalid':submitted && f.name.errors}" />
+            <div *ngIf="submitted && f.name.errors" class="lbl-err">
+              <div *ngIf=" f.name.errors.required ">name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">email</label>
+            <input type="text" formControlName="email" class="form-control" [(ngModel)]="email"
+              [ngClass]="{'is-invalid':submitted && f.email.errors}" />
+            <div *ngIf="submitted && f.email.errors" class="lbl-err">
+              <div *ngIf=" f.email.errors.required ">Email Is Required</div>
+              <div *ngIf="f.email.errors.pattern">Enter Valid EmailId</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">phone</label>
+            <input type="text" formControlName="phone" class="form-control" [(ngModel)]="phone"
+              [ngClass]="{'is-invalid':submitted && f.phone.errors}" />
+            <div *ngIf="submitted && f.phone.errors" class="lbl-err">
+              <div *ngIf=" f.phone.errors.required ">phone is required</div>
+              <div *ngIf="f.phone.errors.pattern">Enter Valid PhoneNumber</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">username</label>
+            <input type="text" formControlName="username" class="form-control" [(ngModel)]="username"
+              [ngClass]="{'is-invalid':submitted && f.username.errors}" />
+            <div *ngIf="submitted && f.username.errors" class="lbl-err">
+              <div *ngIf=" f.username.errors.required ">username is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">website</label>
+            <input type="text" formControlName="website" class="form-control" [(ngModel)]="website"
+              [ngClass]="{'is-invalid':submitted && f.website.errors}" />
+            <div *ngIf="submitted && f.website.errors" class="lbl-err">
+              <div *ngIf=" f.website.errors.required ">website is required</div>
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Address</label><br>
+            <label for="name">street</label>
+            <input type="text" formControlName="street" class="form-control" [(ngModel)]="street"
+              [ngClass]="{'is-invalid':submitted && f.street.errors}" />
+            <div *ngIf="submitted && f.street.errors" class="lbl-err">
+              <div *ngIf=" f.street.errors.required ">street is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">suite</label>
+            <input type="text" formControlName="suite" class="form-control" [(ngModel)]="suite"
+              [ngClass]="{'is-invalid':submitted && f.suite.errors}" />
+            <div *ngIf="submitted && f.suite.errors" class="lbl-err">
+              <div *ngIf=" f.suite.errors.required ">suite is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name">city</label>
+            <input type="text" formControlName="city" class="form-control" [(ngModel)]="city"
+              [ngClass]="{'is-invalid':submitted && f.city.errors}" />
+            <div *ngIf="submitted && f.city.errors" class="lbl-err">
+              <div *ngIf=" f.city.errors.required ">city is required</div>
+            </div>
+            <div class="form-group">
+              <label for="name">zipcode</label>
+              <input type="text" formControlName="zipcode" class="form-control" [(ngModel)]="zipcode"
+                [ngClass]="{'is-invalid':submitted && f.zipcode.errors}" />
+  
+              <div *ngIf="submitted && f.zipcode.errors" class="lbl-err">
+                <div *ngIf="f.zipcode.errors.pattern &&  f.zipcode.errors.required">Enter Valid Zipcode</div>
+                <div *ngIf=" f.zipcode.errors.required ">Zipcode is Required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">latitude</label>
+              <input type="text" formControlName="lat" class="form-control" [(ngModel)]="lat"
+                [ngClass]="{'is-invalid':submitted && f.lat.errors}" />
+              <div *ngIf="submitted && f.lat.errors" class="lbl-err">
+                <div *ngIf=" f.lat.errors.required ">latitude is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">longitude</label>
+              <input type="text" formControlName="lng" class="form-control" [(ngModel)]="lng"
+                [ngClass]="{'is-invalid':submitted && f.lng.errors}" />
+              <div *ngIf="submitted && f.lng.errors" class="lbl-err">
+                <div *ngIf=" f.lng.errors.required ">longitude is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Company</label><br>
+              <label for="name">bs</label>
+              <input type="text" formControlName="bs" class="form-control" [(ngModel)]="bs"
+                [ngClass]="{'is-invalid':submitted && f.bs.errors}" />
+              <div *ngIf="submitted && f.bs.errors" class="lbl-err">
+                <div *ngIf=" f.bs.errors.required ">Required field</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">catchPhrase</label>
+              <input type="text" formControlName="catchPhrase" class="form-control" [(ngModel)]="catchPhrase"
+                [ngClass]="{'is-invalid':submitted && f.catchPhrase.errors}" />
+              <div *ngIf="submitted && f.catchPhrase.errors" class="lbl-err">
+                <div *ngIf=" f.catchPhrase.errors.required ">catchPhrase is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">companyname</label>
+              <input type="text" formControlName="companyname" class="form-control" [(ngModel)]="companyname"
+                [ngClass]="{'is-invalid':submitted && f.companyname.errors}" />
+              <div *ngIf="submitted && f.companyname.errors" class="lbl-err">
+                <div *ngIf=" f.companyname.errors.required ">companyname is required</div>
+              </div>
+            </div>
+  
+            <div class="modal-footer">
+              <div class="form-group">
+                <button type="submit" class="btn btn-save">Update</button>&nbsp;&nbsp;
+  
+              </div>
+            </div>
+          </div>
+  
+  
+        </div>
